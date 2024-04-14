@@ -1,4 +1,4 @@
 package com.pixel.hotelroomreservationsystem;
 
-public class Controller {
+public class SecurityController {
 }
