@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserRegistrationController {
     @Autowired
     private UsersRepository usersRepository;
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @PostMapping("/registration/user")
     public Users createUser(@RequestBody Users user){
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return usersRepository.save(user);
 
     }
