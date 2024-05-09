@@ -1,6 +1,6 @@
-Hotel Room Reservation System
+# Hotel Room Reservation System
 
-The Hotel Room Reservation System is an open-source project developed using Spring Boot (Java) and MySQL. This system allows users to easily search for available hotel rooms, make reservations, and manage their bookings.
+The Hotel Room Reservation System is an open-source project developed using Spring Boot (Java) for the back end, React.js for the front end, and MySQL as the database. This system allows users to easily search for available hotel rooms, make reservations, and manage their bookings. Online payments are facilitated through an integrated payment gateway.
 
 ## Features
 
@@ -13,12 +13,14 @@ The Hotel Room Reservation System is an open-source project developed using Spri
 ## Technologies Used
 
 - **Spring Boot**: Framework for building Java-based enterprise applications.
+- **React.js**: JavaScript library for building user interfaces.
 - **MySQL**: Relational database management system for storing application data.
 - **Thymeleaf**: Server-side Java template engine for building HTML views.
 - **Spring Security**: Authentication and access control framework.
 - **Spring Data JPA**: Data access framework for Java applications.
 - **Maven**: Dependency management tool for Java projects.
 - **JUnit**: Testing framework for unit testing.
+- **Payment Gateway**: Integrated payment gateway for processing online payments.
 
 ## Installation
 
