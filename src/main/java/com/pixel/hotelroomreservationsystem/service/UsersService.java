@@ -16,6 +16,7 @@ public class UsersService implements UserDetailsService {
 
     @Autowired
     private UsersRepository usersRepository;
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException{
         Optional<Users> user = usersRepository.findByEmail(email);

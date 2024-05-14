@@ -19,6 +19,7 @@ import java.util.Optional;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
+    //UserService dependency injection
     @Autowired
     private UsersService usersService;
 
@@ -29,7 +30,7 @@ public class SecurityConfiguration {
                .authorizeHttpRequests(registry -> {
                    registry.requestMatchers("index").permitAll();
                    registry.requestMatchers("/admin/**").hasRole("ADMIN");
-                   registry.requestMatchers("/user?**").hasRole("USER");
+                   registry.requestMatchers("/user/**").hasRole("USER");
                    registry.anyRequest().authenticated();
                })
                .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)

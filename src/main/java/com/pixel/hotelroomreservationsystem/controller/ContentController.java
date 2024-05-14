@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ContentController {
 
     @GetMapping("/home")
-    public String welcomeHandler(Model model){
+    public String index(){
 
-        return "home";
+        return "index";
     }
 
 }

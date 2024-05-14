@@ -1,11 +1,9 @@
 package com.pixel.hotelroomreservationsystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
