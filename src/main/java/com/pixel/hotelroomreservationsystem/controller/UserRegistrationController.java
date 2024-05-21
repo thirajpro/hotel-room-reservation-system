@@ -22,7 +22,7 @@ public class UserRegistrationController {
     //Create a new user
     @PostMapping("/register/user")
     public Users createUser(@RequestBody Users user){
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return usersRepository.save(user);
 
     }

@@ -18,12 +18,13 @@ public class RoomController {
     private RoomService roomService;
     @Autowired
     private UsersService usersService;
+    @Autowired
+    private RoomRepository roomRepository;
 
     //Create a new room
     @PostMapping("/room/register")
     public Room createRoom(@RequestBody Room room){
        return roomService.createRoom(room);
-
     }
 
     //Get room by id
