@@ -33,7 +33,6 @@ public class UsersService implements UserDetailsService {
         throw new UsernameNotFoundException(email);
     }
     }
-
     private String[] getRoles(Users users) {
         if(users.getRole()==null){
             return new String[]{"USER"};
@@ -41,11 +40,21 @@ public class UsersService implements UserDetailsService {
         return users.getRole().split(",");
     }
 
-
     public List<Users> getAllUsers() {
         return usersRepository.findAll();
     }
+
     public Optional<Users> getUserById(Long id){
         return usersRepository.findById(id);
+    }
+
+    public void deleteUserById(Long id){
+        usersRepository.deleteById(id);
+
+    }
+
+    public void deleteAllUsers(){
+        usersRepository.deleteAll();
+
     }
 }
