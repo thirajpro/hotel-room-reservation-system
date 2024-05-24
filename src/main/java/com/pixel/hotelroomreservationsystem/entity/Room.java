@@ -3,18 +3,22 @@ package com.pixel.hotelroomreservationsystem.entity;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.Set;
 
 @Entity
 @Table
 public class Room {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String type;
     private int numberOfPax;
     private BigDecimal roomPrice;
     private boolean availability;
+
+    @OneToMany(mappedBy = "room",cascade = CascadeType.ALL)
+    private Set<Booking> bookings;
 
     public Long getId() {
         return id;
@@ -56,7 +60,11 @@ public class Room {
         this.availability = availability;
     }
 
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
 
-
-
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

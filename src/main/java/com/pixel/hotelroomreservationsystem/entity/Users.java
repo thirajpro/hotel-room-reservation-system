@@ -2,12 +2,14 @@ package com.pixel.hotelroomreservationsystem.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table
 public class Users {
     //primary key, Create user entities
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
@@ -15,7 +17,19 @@ public class Users {
     private String password;
     private String role;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Booking> bookings;
+
     //Getter and Setter
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
+
+
     public Long getId() {
         return id;
     }
