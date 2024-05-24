@@ -9,7 +9,7 @@ import java.util.Set;
 @Table
 public class Payment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private LocalDateTime paymentDate;
     private String status;

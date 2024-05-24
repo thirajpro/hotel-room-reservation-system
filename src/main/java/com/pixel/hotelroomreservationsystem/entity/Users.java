@@ -9,7 +9,7 @@ import java.util.Set;
 public class Users {
     //primary key, Create user entities
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String firstName;
     private String lastName;
