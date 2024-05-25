@@ -25,7 +25,7 @@ public class Booking {
 
     private LocalDateTime bookingDate;
     private LocalDateTime checkInDate;
-    private LocalDateTime checkoutDate;
+    private LocalDateTime checkOutDate;
 
     private Double amount;
     private String bookingStatus;
@@ -78,12 +78,12 @@ public class Booking {
         this.checkInDate = checkInDate;
     }
 
-    public LocalDateTime getCheckoutDate() {
-        return checkoutDate;
+    public LocalDateTime getCheckOutDate() {
+        return checkOutDate;
     }
 
-    public void setCheckoutDate(LocalDateTime checkoutDate) {
-        this.checkoutDate = checkoutDate;
+    public void setCheckOutDate(LocalDateTime checkoutDate) {
+        this.checkOutDate = checkoutDate;
     }
 
     public Double getAmount() {
