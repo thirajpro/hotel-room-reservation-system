@@ -13,8 +13,8 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment/new")
-    public String createPayment(@RequestBody Payment payment){
-        paymentService.createPayment(payment);
-        return "Payment Done!";
+    public Payment createPayment(@RequestBody Payment payment){
+         return paymentService.createPayment(payment);
+
     }
 }
