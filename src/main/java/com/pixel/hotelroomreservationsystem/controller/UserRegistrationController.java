@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+//Rest Controller class for registering a new User
 @RestController
 public class UserRegistrationController {
+
     //dependency injection
     @Autowired
     private UsersService usersService;
+
     @Autowired
     private PasswordEncoder passwordEncoder;
+
     @Autowired
     private UsersRepository usersRepository;
 

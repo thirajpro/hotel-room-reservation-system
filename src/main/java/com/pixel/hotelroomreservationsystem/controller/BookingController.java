@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-//Handling the HTTP request regarding booking
+//Controller class for handling HTTP booking requests
 @RestController
 public class BookingController {
+
     //Dependency injecting
     @Autowired
     private BookingRepository bookingRepository;

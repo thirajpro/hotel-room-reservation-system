@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 import java.util.Optional;
 
+//Room Service class for handling all Room functions
 @Service
 public class RoomService {
 
